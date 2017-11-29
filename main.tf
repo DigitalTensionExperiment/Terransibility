@@ -10,6 +10,10 @@ provider "aws" {
 # S3_access
 
 
+
+# [NETWORKING]
+
+# VPC : networking will be largest section of this terraform script
 resource "aws_vpc" "vpc_name" {
   cidr_block = "10.1.0.0/16"
 }
@@ -20,25 +24,120 @@ resource "aws_vpc" "vpc_name" {
 # this scheme needs to be redefined;
 
 
-# [NETWORKING]
-#VPC : networking will be largest section of this terraform script
 
 # internet gateway
+resource "aws_internet_gateway" "internet_gatways_name" {
+  vpc_id = "${aws_vpc.vpc_name.id}"
+}
+# attach gateway to vpc_id
+# prior to vpc_id being created, it's reference through interpolation syntax (see above)
+## the id of any resource is the name of the resource, specified by the resource type ;
+
 
 # public route table (will be conntected to the internet gateway)
+# use aws_route_table resource, give it an id of "public"
+resource "aws_route_table" "public" {
+  # then give it a vpc_id
+  vpc_id = "${aws_vpc.vpc_name.id}"
+  route {
+    # give it a route to the open internet...
+    cidr_block = "0.0.0.0/0"
+    # ...using the gateway id referenced above
+    gateway_id = "${aws_internet_gateway.internet_gatways_name.id}"
+  }
+  # then tag it with name "public" (optional but useful for scaling)
+  # could also add env tag: development, staging, production, etc;
+  tags {
+    Name = "public"
+  }
+}
+
+
+
 # private route table
+resource "aws_default_route_table" "private" {
+  default_route_table_id = "${aws_vpc.vpc_name.default_route_table_id}"
+  tags {
+    Name = "private"
+  }
+}
+
+
 
 # subnets (there will be several)
+# public subnet
+resource "aws_subnet" "public" {
+  cidr_block = "10.1.1.0/24"
+  vpc_id = "${aws_vpc.vpc_name.id}"
+  map_public_ip_on_launch = true
+  availability_zone = "us-east-1"
+  tags {
+    Name = "public"
+  }
+}
 ## explicit assign subnets and availability zones for every resource that needs one
 ## to have complete control over what we're doing
 ## This allows to troubleshoot quickly, based on IP and availability zones
-# public subnet
+
+
 # private subnet 1 : for one group of ASG launch servers
+resource "aws_subnet" "private1" {
+  cidr_block = "10.1.2.0/24"
+  vpc_id = "${aws_vpc.vpc_name.id}"
+  map_public_ip_on_launch = false
+  availability_zone = "us-east-1"
+  tags {
+    Name = "private1"
+  }
+}
+
+
 # private subnet 2 : for another group of ASG servers, keeping them fault tolerant and resilient
+resource "aws_subnet" "private2" {
+  cidr_block = "10.1.3.0/24"
+  vpc_id = "${aws_vpc.vpc_name.id}"
+  map_public_ip_on_launch = false
+  availability_zone = "us-east-1a"
+  tags {
+    Name = "private2"
+  }
+}
+
+
 ### Then there are 3 RDS subnet groups:
 # RDS1
+resource "aws_subnet" "rds1" {
+  cidr_block = "10.1.4.0/24"
+  vpc_id = "${aws_vpc.vpc_name.id}"
+  map_public_ip_on_launch = false
+  availability_zone = "us-east-1b"
+  tags {
+    Name = "rds1"
+  }
+}
+
 # RDS2
+resource "aws_subnet" "rds2" {
+  cidr_block = "10.1.5.0/24"
+  vpc_id = "${aws_vpc.vpc_name.id}"
+  map_public_ip_on_launch = false
+  availability_zone = "us-east-1c"
+  tags {
+    Name = "rds2"
+  }
+}
+
 # RDS3
+resource "aws_subnet" "rds3" {
+  cidr_block = "10.1.6.0/24"
+  vpc_id = "${aws_vpc.vpc_name.id}"
+  map_public_ip_on_launch = false
+  availability_zone = "us-east-1d"
+  tags {
+    Name = "rds3"
+  }
+}
+
 
 # Security groups
 ## private
