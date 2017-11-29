@@ -1,8 +1,6 @@
 # Terransibility
 
 
-Note: can create value maps for values needed for different env's; 
-
 
 EC2 instances 
 
@@ -31,6 +29,10 @@ user data
 Autoscaling group 
 - autoscaling policies 
 - availability zones 
+
+
+Note: can create value maps for values needed for different env's; 
+
 
 
 
