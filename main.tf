@@ -10,6 +10,15 @@ provider "aws" {
 # S3_access
 
 
+resource "aws_vpc" "vpc_name" {
+  cidr_block = "10.1.0.0/16"
+}
+# A /16 cidr block means the fist two octets (10 and 1), are static
+# the subnets will further divide this range into /24 subnets (252 addresses) ;
+
+# If we want (ie) a max autoscaling group instance count of 300 hosts + an availability zone
+# this scheme needs to be redefined;
+
 
 # [NETWORKING]
 #VPC : networking will be largest section of this terraform script
