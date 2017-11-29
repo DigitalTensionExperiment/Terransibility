@@ -2,9 +2,11 @@
 
 
 
-EC2 instances 
+EC2 instances   
 
 S3 buckets 
+
+RDS 
 
 roles - policies 
 
@@ -20,7 +22,7 @@ AMI (w/ a random name)
 
 key pairs 
 
-Load Balancer 
+Load Balancer  
 
 Launch configs 
 
@@ -31,7 +33,42 @@ Autoscaling group
 - availability zones 
 
 
+
+
+
 Note: can create value maps for values needed for different env's; 
+
+
+
+
+
+
+#### Core AWS features: (free tier offering) 
+(see: https://aws.amazon.com/free/) 
+- EC2 
+- S3 
+- RDS 
+- DynamoDB 
+- ELB 
+- SNS 
+- Lambda 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
