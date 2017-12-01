@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9dbb108c-0ed7-4599-b3d9-a39235400731" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.tf" afterPath="$PROJECT_DIR$/main.tf" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,35 +15,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.tf" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.tf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+            <state relative-caret-position="344">
+              <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
               <folding>
-                <marker date="1511971250000" expanded="true" signature="29:46" ph="${...}" />
-                <marker date="1511971250000" expanded="true" signature="61:79" ph="${...}" />
-                <marker date="1511971250000" expanded="true" signature="697:719" ph="${...}" />
-                <marker date="1511971250000" expanded="true" signature="1129:1151" ph="${...}" />
-                <marker date="1511971250000" expanded="true" signature="1303:1351" ph="${...}" />
-                <marker date="1511971250000" expanded="true" signature="1628:1670" ph="${...}" />
-                <marker date="1511971250000" expanded="true" signature="1835:1857" ph="${...}" />
-                <marker date="1511971250000" expanded="true" signature="2305:2327" ph="${...}" />
-                <marker date="1511971250000" expanded="true" signature="2609:2631" ph="${...}" />
-                <marker date="1511971250000" expanded="true" signature="2860:2882" ph="${...}" />
-                <marker date="1511971250000" expanded="true" signature="3066:3088" ph="${...}" />
-                <marker date="1511971250000" expanded="true" signature="3272:3294" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="29:46" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="61:79" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="748:770" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="1180:1202" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="1354:1402" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="1704:1746" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="1911:1933" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="2381:2403" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="2685:2707" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="2936:2958" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="3142:3164" ph="${...}" />
+                <marker date="1512161668000" expanded="true" signature="3348:3370" ph="${...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="746">
-                <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <first_editor relative-caret-position="240">
+                <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -80,8 +81,8 @@
       <list>
         <option value="$PROJECT_DIR$/variable.tf" />
         <option value="$PROJECT_DIR$/terraform.tfvars" />
-        <option value="$PROJECT_DIR$/main.tf" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/main.tf" />
       </list>
     </option>
   </component>
@@ -368,35 +369,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <marker date="1511971250000" expanded="true" signature="29:46" ph="${...}" />
-            <marker date="1511971250000" expanded="true" signature="61:79" ph="${...}" />
-            <marker date="1511971250000" expanded="true" signature="697:719" ph="${...}" />
-            <marker date="1511971250000" expanded="true" signature="1129:1151" ph="${...}" />
-            <marker date="1511971250000" expanded="true" signature="1303:1351" ph="${...}" />
-            <marker date="1511971250000" expanded="true" signature="1628:1670" ph="${...}" />
-            <marker date="1511971250000" expanded="true" signature="1835:1857" ph="${...}" />
-            <marker date="1511971250000" expanded="true" signature="2305:2327" ph="${...}" />
-            <marker date="1511971250000" expanded="true" signature="2609:2631" ph="${...}" />
-            <marker date="1511971250000" expanded="true" signature="2860:2882" ph="${...}" />
-            <marker date="1511971250000" expanded="true" signature="3066:3088" ph="${...}" />
-            <marker date="1511971250000" expanded="true" signature="3272:3294" ph="${...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="746">
-            <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <first_editor relative-caret-position="240">
+            <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+          <folding>
+            <marker date="1512161668000" expanded="true" signature="29:46" ph="${...}" />
+            <marker date="1512161668000" expanded="true" signature="61:79" ph="${...}" />
+            <marker date="1512161668000" expanded="true" signature="748:770" ph="${...}" />
+            <marker date="1512161668000" expanded="true" signature="1180:1202" ph="${...}" />
+            <marker date="1512161668000" expanded="true" signature="1354:1402" ph="${...}" />
+            <marker date="1512161668000" expanded="true" signature="1704:1746" ph="${...}" />
+            <marker date="1512161668000" expanded="true" signature="1911:1933" ph="${...}" />
+            <marker date="1512161668000" expanded="true" signature="2381:2403" ph="${...}" />
+            <marker date="1512161668000" expanded="true" signature="2685:2707" ph="${...}" />
+            <marker date="1512161668000" expanded="true" signature="2936:2958" ph="${...}" />
+            <marker date="1512161668000" expanded="true" signature="3142:3164" ph="${...}" />
+            <marker date="1512161668000" expanded="true" signature="3348:3370" ph="${...}" />
+          </folding>
         </state>
       </provider>
     </entry>

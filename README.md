@@ -104,6 +104,23 @@ Role allows service to act as a user;
 
 
 
+### Global infrastructure 
+
+regions - for reducing latency; comprised of different availibility zones; 
+
+availibility zones - isolated within a region, and house AWS resources; 
+Where specific data centers are located; redundancy; 
+
+data centers - separated regionally; 
+all components of physical layer; 
+
+S3 backs up data across multiple availability zones; 
+fault tolerant architecture; 
+
+
+
+
+
 
 
 

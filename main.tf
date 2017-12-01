@@ -13,7 +13,8 @@ provider "aws" {
 
 # [NETWORKING]
 
-# VPC : networking will be largest section of this terraform script
+# VPC : networking will be largest section of this terraform script ;
+# backbone of any instructure we decide to build
 resource "aws_vpc" "vpc_name" {
   cidr_block = "10.1.0.0/16"
 }
@@ -49,6 +50,7 @@ resource "aws_route_table" "public" {
   # could also add env tag: development, staging, production, etc;
   tags {
     Name = "public"
+    Env = "development" 
   }
 }
 
