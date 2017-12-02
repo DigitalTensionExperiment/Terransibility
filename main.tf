@@ -142,7 +142,6 @@ resource "aws_subnet" "rds3" {
 
 
 # Subnet associations
-
 resource "aws_route_table_association" "public_association" {
   subnet_id = "${aws_subnet.public.id}"
   route_table_id = "${aws_route_table.public.id}"
@@ -172,9 +171,70 @@ resource "aws_db_subnet_group" "rds_subnetgroup" {
 
 
 # Security groups
+## public : will allow access from anywhere to port 80, but only from your IP address to port 22
+resource "aws_security_group" "public" {
+  name = "sg_public"
+  description = ""
+  vpc_id = "${aws_vpc.vpc_name.id}"
+
+  # SSH
+  ingress {
+    from_port = 22
+    protocol = "tcp"
+    to_port = 22
+    cidr_blocks = ["${var.localip}"]
+  }
+
+  # HTTPS
+  ingress {
+    from_port = 80
+    protocol = "tcp"
+    to_port = 80
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port = 0
+    protocol = "-1"
+    to_port = 0
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
 ## private
-## public
-## RDS
+resource "aws_security_group" "private" {
+  name = "sg_private"
+  description = ""
+  vpc_id = "${aws_vpc.vpc_name.id}"
+
+  # Access from other security groups
+  ingress {
+    from_port = 0
+    protocol = ""
+    to_port = 0
+  }
+
+  egress {
+    from_port = 0
+    protocol = ""
+    to_port = 0
+  }
+}
+
+## RDS Security group
+resource "aws_security_group" "RDS" {
+  name = "sg_rds"
+  description = ""
+  vpc_id = "${aws_vpc.vpc_name.id}"
+
+  # SQL accress from public/private security group
+  ingress {
+    from_port = 3306
+    protocol = "tcp"
+    to_port = 3306
+    security_groups = ["${aws_security_group.public.id}", "${aws_security_group.private.id}"]
+  }
+}
 
 
 
