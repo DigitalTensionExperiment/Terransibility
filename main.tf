@@ -50,7 +50,7 @@ resource "aws_route_table" "public" {
   # could also add env tag: development, staging, production, etc;
   tags {
     Name = "public"
-    Env = "development" 
+    Env = "development"
   }
 }
 
@@ -139,6 +139,36 @@ resource "aws_subnet" "rds3" {
     Name = "rds3"
   }
 }
+
+
+# Subnet associations
+
+resource "aws_route_table_association" "public_association" {
+  subnet_id = "${aws_subnet.public.id}"
+  route_table_id = "${aws_route_table.public.id}"
+}
+
+resource "aws_route_table_association" "private1_association" {
+  subnet_id = "${aws_subnet.private1.id}"
+  route_table_id = "${aws_route_table.public.id}"
+}
+
+resource "aws_route_table_association" "private2_association" {
+  subnet_id = "${aws_subnet.private2.id}"
+  route_table_id = "${aws_route_table.public.id}"
+}
+
+# Must map private subnets to public gateway
+# without assigning public IP's to them
+
+resource "aws_db_subnet_group" "rds_subnetgroup" {
+  name = "rds_subnetgroup"
+  subnet_ids = ["${aws_subnet.rds1.id}", "${aws_subnet.rds2.id}", "${aws_subnet.rds3.id}"]
+  tags {
+    Name = "rds_sng"
+  }
+}
+
 
 
 # Security groups
