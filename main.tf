@@ -244,7 +244,22 @@ resource "aws_security_group" "RDS" {
 
 
 
-# [COMPUTE RESOURCES]
+# [DB & COMPUTE RESOURCES]
+resource "aws_db_instance" "db" {
+  instance_class = ""
+  allocated_storage = 10
+  engine = "mysql"
+  engine_version = ""
+  instance_class = "${var.db_instance_class}"
+  name = "${var.dbname}"
+  # username to access the instance
+  username = "${var.dbuser}"
+  password = "${var.dbpassword}"
+  db_subnet_group_name = "${aws_db_subnet_group.rds_subnetgroup.name}"
+  vpc_security_group_ids = ["${aws_security_group.RDS.id}"]
+}
+
+
 # key pair (from ssh-keygen ran locally)
 # master dev server (uses ansible playbook)
 # load balancer (forwards traffic to private instances)
