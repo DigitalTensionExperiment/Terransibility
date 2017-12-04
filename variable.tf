@@ -8,3 +8,4 @@ variable "dbpassword" {}
 variable "public_key_path" {}
 variable "key_name" {}
 variable "domain_name" {}
+variable "AMIS" {}

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dbb108c-0ed7-4599-b3d9-a39235400731" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/instance.tf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.tf" afterPath="$PROJECT_DIR$/main.tf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/terraform.tfvars" afterPath="$PROJECT_DIR$/terraform.tfvars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/variable.tf" afterPath="$PROJECT_DIR$/variable.tf" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.tf" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.tf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-498">
-              <caret line="270" column="1" lean-forward="true" selection-start-line="270" selection-start-column="1" selection-end-line="270" selection-end-column="1" />
+            <state relative-caret-position="188">
+              <caret line="336" column="11" lean-forward="false" selection-start-line="336" selection-start-column="10" selection-end-line="336" selection-end-column="11" />
               <folding>
                 <marker date="1512350873000" expanded="true" signature="29:46" ph="${...}" />
                 <marker date="1512350873000" expanded="true" signature="61:79" ph="${...}" />
@@ -71,11 +71,42 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="163">
+                <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="instance.tf" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/instance.tf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+              <folding>
+                <marker date="1512429703000" expanded="true" signature="46:81" ph="${...}" />
+                <marker date="1512429703000" expanded="true" signature="54:80" ph="(...)" />
+                <marker date="1512429703000" expanded="true" signature="228:251" ph="${...}" />
+                <marker date="1512429703000" expanded="true" signature="345:376" ph="${...}" />
+                <marker date="1512429703000" expanded="true" signature="394:423" ph="${...}" />
+                <marker date="1512429703000" expanded="true" signature="482:499" ph="${...}" />
+                <marker date="1512429703000" expanded="true" signature="692:719" ph="${...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="variable.tf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/variable.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="0">
+              <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -93,16 +124,24 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>aws_in</find>
+      <find>EC2</find>
+      <find>key_pair</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/variable.tf" />
         <option value="$PROJECT_DIR$/terraform.tfvars" />
         <option value="$PROJECT_DIR$/main.tf" />
+        <option value="$PROJECT_DIR$/variable.tf" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/instance.tf" />
       </list>
     </option>
   </component>
@@ -373,25 +412,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/variable.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/terraform.tfvars">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -400,10 +420,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/variable.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="163">
+            <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.tf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-498">
-          <caret line="270" column="1" lean-forward="true" selection-start-line="270" selection-start-column="1" selection-end-line="270" selection-end-column="1" />
+        <state relative-caret-position="188">
+          <caret line="336" column="11" lean-forward="false" selection-start-line="336" selection-start-column="10" selection-end-line="336" selection-end-column="11" />
           <folding>
             <marker date="1512350873000" expanded="true" signature="29:46" ph="${...}" />
             <marker date="1512350873000" expanded="true" signature="61:79" ph="${...}" />
@@ -448,6 +487,22 @@
             <marker date="1512350873000" expanded="true" signature="6840:6861" ph="(...)" />
             <marker date="1512350873000" expanded="true" signature="7212:7242" ph="${...}" />
             <marker date="1512350873000" expanded="true" signature="7377:7405" ph="${...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instance.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+          <folding>
+            <marker date="1512429703000" expanded="true" signature="46:81" ph="${...}" />
+            <marker date="1512429703000" expanded="true" signature="54:80" ph="(...)" />
+            <marker date="1512429703000" expanded="true" signature="228:251" ph="${...}" />
+            <marker date="1512429703000" expanded="true" signature="345:376" ph="${...}" />
+            <marker date="1512429703000" expanded="true" signature="394:423" ph="${...}" />
+            <marker date="1512429703000" expanded="true" signature="482:499" ph="${...}" />
+            <marker date="1512429703000" expanded="true" signature="692:719" ph="${...}" />
           </folding>
         </state>
       </provider>

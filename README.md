@@ -121,7 +121,34 @@ fault tolerant architecture;
 
 
 
+Note: If you activate a NAT gateway and activate routes to route the traffic through the it 
+instances will be able to send outgoing traffic over the NAT gateway. 
+It's not possible to enable incoming traffic (e.g. webserver)
 
+
+
+
+Scenario: 
+
+ You want to run a database 
+ that only needs to be reachable from a webserver 
+ within the same availability zone (us-east-1b) 
+ and within the same VPC. 
+ 
+ You also want to update your database now and then. 
+ The binaries that the database server needs to download (the updates) 
+ are present on another webserver that's still within the same VPC, 
+ but on a subnet within another availability zone (us-east-2b). 
+ 
+ The webserver serves traffic for internet users. 
+ 
+Soln: 
+
+ put webserver in public subnet 
+ put DB server in a private subnet 
+ 
+ the DB server will always be able to connect to the download server 
+ as long as firewall rules are not blocking ports; 
 
 
 
