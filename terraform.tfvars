@@ -5,4 +5,7 @@ db_instance_class = "db.t1.micro"
 dbname = ""
 dbuser = ""
 dbpassword = ""
+key_name = ""
+public_key_path = ""
+
 

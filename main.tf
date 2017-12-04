@@ -261,6 +261,13 @@ resource "aws_db_instance" "db" {
 
 
 # key pair (from ssh-keygen ran locally)
+resource "aws_key_pair" "auth" {
+  public_key = "${}"
+  key_name = "${var.key_name}"
+  public_key = "${file(var.public_key_path)}"
+}
+
+
 # master dev server (uses ansible playbook)
 # load balancer (forwards traffic to private instances)
 # AMI (from our dev instance)
