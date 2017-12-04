@@ -7,5 +7,5 @@ dbuser = ""
 dbpassword = ""
 key_name = ""
 public_key_path = ""
-
+domain_name = ""
 

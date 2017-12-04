@@ -105,6 +105,27 @@ resource "aws_subnet" "private2" {
   }
 }
 
+# create s3 VPC endpoint
+resource "aws_vpc_endpoint" "private-s3" {
+  vpc_id = "${aws_vpc.vpc_name.id}"
+  service_name = "com.amazonaws.${var.aws_region}.s3"
+  route_table_ids = ["${aws_vpc.vpc_name.main_route_table_id}", "${aws_route_table.public.id}"]
+  policy = <<POLICY
+{
+  "Statement": [
+    {
+      "Action": "*",
+      "Effect": "Allow",
+      "Resource": "*",
+      "Principal": "*",
+
+      "Sid": "",
+    }
+  ]
+}
+POLICY
+}
+
 
 ### Then there are 3 RDS subnet groups:
 # RDS1
@@ -239,6 +260,17 @@ resource "aws_security_group" "RDS" {
 
 
 # [S3 CODE BUCKET]
+resource "aws_s3_bucket" "code" {
+  # random string attached ensures uniqueness
+  bucket = "${var.domain_name}_randomcodex56845"
+  acl = ""
+  force_destroy = true
+  tags {
+    Name = "code bucket"
+  }
+}
+
+
 # if you want to create a cloud front distribution
 # add media bucket here
 
@@ -266,6 +298,63 @@ resource "aws_key_pair" "auth" {
   key_name = "${var.key_name}"
   public_key = "${file(var.public_key_path)}"
 }
+
+
+
+# S3 requires more resources:
+## buckets (gets created in the compute section of script)
+## ability for EC2 to access buckets {profile, role policy, role in IAM section of script}
+## endpoint from which private instances can access the bucket
+
+# IAM
+# S3 access
+resource "aws_iam_instance_profile" "s3_access" {
+  name = "s3_access"
+  role = "${aws_iam_role.s3_access.name}"
+  # roles = [] appears to be depricated
+}
+
+resource "aws_iam_role_policy" "s3_access_policy" {
+  name = "s3_access_policy"
+  role = "${aws_iam_role.s3_access.id}"
+  policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "IPAllow",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:*",
+      "Resource": "*",
+
+    }
+  ]
+}
+EOF
+}
+
+resource "aws_iam_role" "s3_access" {
+  name = "s3_access"
+  assume_role_policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "s3:*",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": "",
+    }
+  ]
+}
+EOF
+
+}
+
+# Check AWS docs and Terraform docs for sample policies to copy and paste
 
 
 # master dev server (uses ansible playbook)
