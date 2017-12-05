@@ -168,7 +168,14 @@ add device to a line in fstab;
 
 unmount, remount, and check for it after reboot; 
 
+
  
+#### cloud-init 
+Reason for using template is so we can pass variables; 
+
+
+  
+  
 
 
 

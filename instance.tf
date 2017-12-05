@@ -56,8 +56,13 @@ resource "aws_instance" "vpn_server" {
   #userdata
   # #!/bin/bash indicates a script
   # the \n means new line
-  user_data = "#!/bin/bash\nwget http://swupdate.openvpn.org/as/openvpn-as-2.1.2-Ubuntu14.amd_64.deb\ndpkg -i openvpn-as-2.1.2-Ubuntu14.amd_64.deb"
-} 
+  # user_data = "#!/bin/bash\nwget http://swupdate.openvpn.org/as/openvpn-as-2.1.2-Ubuntu14.amd_64.deb\ndpkg -i openvpn-as-2.1.2-Ubuntu14.amd_64.deb"
+
+  # better than a direct script string, use the template system:
+  # here, user_data uses a cloudinit config that's rendered
+  user_data = "${data.template_cloudinit_config.cloudinit-example.rendered}"
+
+}
 
 
 
