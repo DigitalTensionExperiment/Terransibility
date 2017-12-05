@@ -10,12 +10,22 @@ resource "aws_instance" "EC2_test" {
   vpc_security_group_ids = ["${aws_security_group.public.id}"]
 
   key_name = "${aws_key_pair.auth.key_name}"
+
+  root_block_device {
+    volume_size = 16
+    volume_type = "gp2"
+    delete_on_termination = true
+  }
+
 }
 
 # The root volume of 8GB still exists
-# We're just adding an extra 20 Gigs 
+# We're just adding an extra 20 Gigs
 
-resource "aws_ebs_volume" "" {
+# To add extra space to the root volume itself
+# use root_block_device in the aws_instance resource;
+
+resource "aws_ebs_volume" "ebs-volume1" {
   availability_zone = "${var.aws_region}"
   size = 20
   type = "gp2" # general purpose
@@ -25,7 +35,56 @@ resource "aws_ebs_volume" "" {
 }
 
 resource "aws_volume_attachment" "ebs-volume1-attachment" {
-  device_name = "${}"
+  device_name = "/dev/xvdh"
   instance_id = "${aws_instance.EC2_test.id}"
-  volume_id = "${}"
+  volume_id = "${aws_ebs_volume.ebs-volume1.id}"
 }
+
+
+
+# Install and OpenVPN server at boot time
+resource "aws_instance" "vpn_server" {
+  ami = "${lookup(var.AMIS, var.aws_region)}"
+  instance_type = "t2.micro"
+
+  subnet_id = "${aws_subnet.public.id}"
+
+  vpc_security_group_ids = ["${aws_security_group.public.id}"]
+
+  key_name = "${aws_key_pair.auth.key_name}"
+
+  #userdata
+  user_data = ""
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

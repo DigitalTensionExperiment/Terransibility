@@ -153,6 +153,27 @@ Soln:
 
 
 
+#### Add EBS volume to instance 
+** Make sure to have run ssh-keygen before running terraform apply; 
+
+Check terraform.tfstate for IP given to instance; 
+
+Use that IP to ssh into the machine you just spun up; 
+
+Create filesystem on added volume [device]; 
+
+mount the device; 
+
+add device to a line in fstab; 
+
+unmount, remount, and check for it after reboot; 
+
+ 
+
+
+
+
+
 
 
 
