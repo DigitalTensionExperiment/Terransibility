@@ -54,8 +54,12 @@ resource "aws_instance" "vpn_server" {
   key_name = "${aws_key_pair.auth.key_name}"
 
   #userdata
-  user_data = ""
-}
+  # #!/bin/bash indicates a script
+  # the \n means new line
+  user_data = "#!/bin/bash\nwget http://swupdate.openvpn.org/as/openvpn-as-2.1.2-Ubuntu14.amd_64.deb\ndpkg -i openvpn-as-2.1.2-Ubuntu14.amd_64.deb"
+} 
+
+
 
 
 

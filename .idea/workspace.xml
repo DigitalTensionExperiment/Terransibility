@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dbb108c-0ed7-4599-b3d9-a39235400731" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/instance.tf" afterPath="$PROJECT_DIR$/instance.tf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/variable.tf" afterPath="$PROJECT_DIR$/variable.tf" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -87,22 +84,22 @@
       <file leaf-file-name="instance.tf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/instance.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+            <state relative-caret-position="396">
+              <caret line="59" column="2" lean-forward="false" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
               <folding>
-                <marker date="1512511056000" expanded="true" signature="46:81" ph="${...}" />
-                <marker date="1512511056000" expanded="true" signature="54:80" ph="(...)" />
-                <marker date="1512511056000" expanded="true" signature="228:251" ph="${...}" />
-                <marker date="1512511056000" expanded="true" signature="345:376" ph="${...}" />
-                <marker date="1512511056000" expanded="true" signature="394:423" ph="${...}" />
-                <marker date="1512511056000" expanded="true" signature="777:794" ph="${...}" />
-                <marker date="1512511056000" expanded="true" signature="993:1020" ph="${...}" />
-                <marker date="1512511056000" expanded="true" signature="1037:1069" ph="${...}" />
-                <marker date="1512511056000" expanded="true" signature="1166:1201" ph="${...}" />
-                <marker date="1512511056000" expanded="true" signature="1174:1200" ph="(...)" />
-                <marker date="1512511056000" expanded="true" signature="1248:1271" ph="${...}" />
-                <marker date="1512511056000" expanded="true" signature="1303:1334" ph="${...}" />
-                <marker date="1512511056000" expanded="true" signature="1352:1381" ph="${...}" />
+                <marker date="1512511454000" expanded="true" signature="46:81" ph="${...}" />
+                <marker date="1512511454000" expanded="true" signature="54:80" ph="(...)" />
+                <marker date="1512511454000" expanded="true" signature="228:251" ph="${...}" />
+                <marker date="1512511454000" expanded="true" signature="345:376" ph="${...}" />
+                <marker date="1512511454000" expanded="true" signature="394:423" ph="${...}" />
+                <marker date="1512511454000" expanded="true" signature="777:794" ph="${...}" />
+                <marker date="1512511454000" expanded="true" signature="993:1020" ph="${...}" />
+                <marker date="1512511454000" expanded="true" signature="1037:1069" ph="${...}" />
+                <marker date="1512511454000" expanded="true" signature="1166:1201" ph="${...}" />
+                <marker date="1512511454000" expanded="true" signature="1174:1200" ph="(...)" />
+                <marker date="1512511454000" expanded="true" signature="1248:1271" ph="${...}" />
+                <marker date="1512511454000" expanded="true" signature="1303:1334" ph="${...}" />
+                <marker date="1512511454000" expanded="true" signature="1352:1381" ph="${...}" />
               </folding>
             </state>
           </provider>
@@ -146,8 +143,8 @@
         <option value="$PROJECT_DIR$/terraform.tfvars" />
         <option value="$PROJECT_DIR$/main.tf" />
         <option value="$PROJECT_DIR$/variable.tf" />
-        <option value="$PROJECT_DIR$/instance.tf" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/instance.tf" />
       </list>
     </option>
   </component>
@@ -508,19 +505,19 @@
         <state relative-caret-position="285">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
-            <marker date="1512511056000" expanded="true" signature="46:81" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="54:80" ph="(...)" />
-            <marker date="1512511056000" expanded="true" signature="228:251" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="345:376" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="394:423" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="777:794" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="993:1020" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="1037:1069" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="1166:1201" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="1174:1200" ph="(...)" />
-            <marker date="1512511056000" expanded="true" signature="1248:1271" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="1303:1334" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="1352:1381" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="46:81" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="54:80" ph="(...)" />
+            <marker date="1512511454000" expanded="true" signature="228:251" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="345:376" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="394:423" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="777:794" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="993:1020" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="1037:1069" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="1166:1201" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="1174:1200" ph="(...)" />
+            <marker date="1512511454000" expanded="true" signature="1248:1271" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="1303:1334" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="1352:1381" ph="${...}" />
           </folding>
         </state>
       </provider>
@@ -606,22 +603,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/instance.tf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        <state relative-caret-position="396">
+          <caret line="59" column="2" lean-forward="false" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
           <folding>
-            <marker date="1512511056000" expanded="true" signature="46:81" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="54:80" ph="(...)" />
-            <marker date="1512511056000" expanded="true" signature="228:251" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="345:376" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="394:423" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="777:794" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="993:1020" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="1037:1069" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="1166:1201" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="1174:1200" ph="(...)" />
-            <marker date="1512511056000" expanded="true" signature="1248:1271" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="1303:1334" ph="${...}" />
-            <marker date="1512511056000" expanded="true" signature="1352:1381" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="46:81" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="54:80" ph="(...)" />
+            <marker date="1512511454000" expanded="true" signature="228:251" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="345:376" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="394:423" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="777:794" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="993:1020" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="1037:1069" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="1166:1201" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="1174:1200" ph="(...)" />
+            <marker date="1512511454000" expanded="true" signature="1248:1271" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="1303:1334" ph="${...}" />
+            <marker date="1512511454000" expanded="true" signature="1352:1381" ph="${...}" />
           </folding>
         </state>
       </provider>
