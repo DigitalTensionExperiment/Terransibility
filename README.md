@@ -180,6 +180,23 @@ shell script (vs) upstart script
 shell script: content_type = "text/x-shellscript" 
 
 upstart script: content_type = "text/upstart-job" 
+
+
+
+
+#### Route53 
+** Use hostnames rather than IP 
+
+register a domain name 
+> When you register a domain, you need to add the AWS nameservers to that domain;  
+> To know your nameservers for your particular domain, use output resource to output the 
+property [aws_route53_zone.example-com.name_servers] ; 
+
+create a zone in route53 (ex: domain.com)
+
+add DNS records (ex: server1.domain.com) 
+
+
   
   
 
