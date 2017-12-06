@@ -72,8 +72,16 @@ resource "aws_instance" "privateIP_specified" {
   ami = "${lookup(var.AMIS, var.aws_region)}"
   instance_type = "t2.micro"
   subnet_id = "${aws_subnet.public.id}"
-  private_ip = "" 
+  private_ip = ""
 }
+
+# Specifying a public IP: EIP (Elastic IP addresses)
+resource "aws_eip" "EIP_example" {
+  instance = "${aws_instance.privateIP_specified.id}"
+  vpc = true
+}
+
+
 
 
 
