@@ -174,6 +174,12 @@ unmount, remount, and check for it after reboot;
 Reason for using template is so we can pass variables; 
 
 
+
+shell script (vs) upstart script 
+
+shell script: content_type = "text/x-shellscript" 
+
+upstart script: content_type = "text/upstart-job" 
   
   
 

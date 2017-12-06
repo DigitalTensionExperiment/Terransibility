@@ -44,6 +44,7 @@ resource "aws_volume_attachment" "ebs-volume1-attachment" {
 
 # Install and OpenVPN server at boot time
 resource "aws_instance" "vpn_server" {
+
   ami = "${lookup(var.AMIS, var.aws_region)}"
   instance_type = "t2.micro"
 
@@ -53,7 +54,7 @@ resource "aws_instance" "vpn_server" {
 
   key_name = "${aws_key_pair.auth.key_name}"
 
-  #userdata
+  # userdata
   # #!/bin/bash indicates a script
   # the \n means new line
   # user_data = "#!/bin/bash\nwget http://swupdate.openvpn.org/as/openvpn-as-2.1.2-Ubuntu14.amd_64.deb\ndpkg -i openvpn-as-2.1.2-Ubuntu14.amd_64.deb"
@@ -66,7 +67,13 @@ resource "aws_instance" "vpn_server" {
 
 
 
-
+# Specifying a private IP for an EC2 instance
+resource "aws_instance" "privateIP_specified" {
+  ami = "${lookup(var.AMIS, var.aws_region)}"
+  instance_type = "t2.micro"
+  subnet_id = "${aws_subnet.public.id}"
+  private_ip = "" 
+}
 
 
 
