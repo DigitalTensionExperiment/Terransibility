@@ -203,6 +203,7 @@ resource "aws_security_group" "public" {
     from_port = 22
     protocol = "tcp"
     to_port = 22
+    # May specify security groups rather than CIDR blocks:
     cidr_blocks = ["${var.localip}"]
   }
 
@@ -278,8 +279,13 @@ resource "aws_s3_bucket" "code" {
 
 # [DB & COMPUTE RESOURCES]
 resource "aws_db_instance" "db" {
-  instance_class = ""
-  allocated_storage = 10
+  # For instance, use micro to stay within the free tier:
+  instance_class = "db.t2.small"
+
+  # 100 is recommended because 100 GB gives us more IOPS (IO per second) than a lower number
+  # IOPS = read and writes per second:
+  allocated_storage = 100
+
   engine = "mysql"
   engine_version = ""
   instance_class = "${var.db_instance_class}"
@@ -287,8 +293,27 @@ resource "aws_db_instance" "db" {
   # username to access the instance
   username = "${var.dbuser}"
   password = "${var.dbpassword}"
+
+  # Refers to the subnet group we created earlier:
   db_subnet_group_name = "${aws_db_subnet_group.rds_subnetgroup.name}"
+
+  # parameter_group_name
+
+  # setting this to true gives us high availability:
+  # (2 instances will synchronize with each other)
+  multi_az = false
+
+  storage_type = "gp2" #general purpose
+
+  backup_retention_period = 30
+
+  availability_zone = ""
+
   vpc_security_group_ids = ["${aws_security_group.RDS.id}"]
+
+  tags {
+    Name = ""
+  }
 }
 
 

@@ -53,6 +53,23 @@ Note: can create value maps for values needed for different env's;
 - SNS 
 - Lambda 
 
+
+###### RDS  
+create a subnet group 
+> allow specify what subnets a DB will be in (ie: us-east-1) 
+
+create a parameter group 
+> allows to specify what parameters to change in DB settings; 
+> Without shell access to a DB, this is the only way to make changes to it; 
+
+create a security group 
+> allows incoming traffic to the RDS instance; put into private subnet groups, 
+ it can only be accessed by instances in the same subnet and 
+ won't be accessible from the internet; 
+
+THEN create the RDS instance 
+
+
 ###### S3 buckets: 
 - create a bucket 
 - add object [to bucket] 
@@ -197,7 +214,8 @@ create a zone in route53 (ex: domain.com)
 add DNS records (ex: server1.domain.com) 
 
 
-  
+
+
   
 
 
