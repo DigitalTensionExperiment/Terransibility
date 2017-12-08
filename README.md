@@ -222,6 +222,88 @@ add DNS records (ex: server1.domain.com)
 
 
 
+### Project folder structure notes: 
+
+
+[provider.tf] 
+
+- specify region (variable found in vars.tf) 
+- paths to access_key, secret_key optional 
+
+
+[output.tf] 
+
+
+
+[instance] 
+
+- provisioner can be specified within the aws_instance resource (specify connection with it)
+- output can be specified here (unless output.tf exists) 
+- aws_key_pair resource can be added at the top (otherwise, put keys in key.tf) 
+
+
+
+[key.tf] 
+
+
+
+
+[vars.tf] 
+
+- type can = map, holding multiple default values  
+
+
+
+[securitygroup.tf] 
+
+- aws_security_group resource can consist of ingress, egress, and tags 
+- aws_ip_ranges data can be included, specifying regions and services 
+ 
+ 
+ 
+[modules.tf] 
+
+
+
+
+[vpc.tf] 
+
+- create main aws_vpc 
+- create aws_subnet resources 
+- create aws_internet_gateway 
+- create aws_route_table resource that can be pushed to the instances 
+- create aws_route_table_associations that are public 
+
+
+
+[nat.tf] 
+
+- create an aws_eip resource 
+- use eip to create a nat gateway via resource aws_nat_gateway 
+- conduct vpc setup for nat via aws_route_table resource 
+- for aws_route_table resources, create aws_route_table_association resources that are private 
+
+
+
+
+[terraform.tfstate] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

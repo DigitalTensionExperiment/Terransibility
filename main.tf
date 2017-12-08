@@ -1,9 +1,3 @@
-provider "aws" {
-  region = "${var.aws_region}"
-  profile = "${var.aws_profile}"
-}
-
-
 
 # [SECURITY]
 # IAM : security should be at the top of any infrastructure plan
